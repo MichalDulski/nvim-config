@@ -1,10 +1,9 @@
 return {
 	{
 		"folke/tokyonight.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		lazy = false, 
+		priority = 1000,
 		config = function()
-			-- load the colorscheme here
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
@@ -17,9 +16,9 @@ return {
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
-			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+			-- "3rd/image.nvim",
 		}
 	},
 	{
@@ -34,4 +33,13 @@ return {
 	{ "mbbill/undotree" },
 	{ "tpope/vim-fugitive" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
+
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
+
+	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+	{'neovim/nvim-lspconfig'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/nvim-cmp'},
+	{'L3MON4D3/LuaSnip'},
 }
