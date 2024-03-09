@@ -14,6 +14,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("set")
-require("remap")
+require("config/set")
+require("config/remap")
 require("lazy").setup("plugins")
+
+vim.cmd("colorscheme solarized-osaka")
