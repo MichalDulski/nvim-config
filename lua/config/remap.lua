@@ -50,5 +50,10 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- Auto closing brackets
+-- Auto closing delimeters
 keymap.set("i", "{", "{}<left><Return><tab><Return><up><End>")
+keymap.set("i", "\"", "\"\"<left>")
+keymap.set("i", "'", "''<left>")
+keymap.set("i", "(", "()<left>")
+keymap.set("i", "[", "[]<left>")
+keymap.set("i", "<", "<><left>")
