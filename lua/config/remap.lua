@@ -49,3 +49,6 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Auto closing brackets
+keymap.set("i", "{", "{}<left><Return><tab><Return><up><End>")
