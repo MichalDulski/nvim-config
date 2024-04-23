@@ -33,7 +33,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.updatetime = 50
 
 -- Whitespace characters
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Diagnostic keymaps
