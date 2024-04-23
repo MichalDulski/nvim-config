@@ -1,5 +1,5 @@
-local keymap = vim.keymap;
-local opts = { noremap = true, silent = true}
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 
 -- Open explorer
 keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -16,12 +16,12 @@ keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
 -- Paste without losing current paste buffer
-keymap.set("x", "<leader>p", "\"_dP")
+keymap.set("x", "<leader>p", '"_dP')
 
 -- Yank into system clipboard
-keymap.set("n", "<leader>y", "\"+y")
-keymap.set("v", "<leader>y", "\"+y")
-keymap.set("n", "<leader>Y", "\"+Y")
+keymap.set("n", "<leader>y", '"+y')
+keymap.set("v", "<leader>y", '"+y')
+keymap.set("n", "<leader>Y", '"+Y')
 
 -- Replace word under the cursor
 keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -32,7 +32,6 @@ keymap.set("n", "-", "<C-x>")
 
 -- Select all
 keymap.set("n", "<C-a>", "ggVG")
-
 
 -- Split window
 keymap.set("n", "<leader>sh", ":split<Return>", opts)
@@ -50,10 +49,9 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- Auto closing delimeters
-keymap.set("i", "{", "{}<left><Return><tab><Return><up><End>")
-keymap.set("i", "\"", "\"\"<left>")
-keymap.set("i", "'", "''<left>")
-keymap.set("i", "(", "()<left>")
-keymap.set("i", "[", "[]<left>")
-keymap.set("i", "<", "<><left>")
+keymap.set("n", "<leader><C-w>t", function()
+	vim.opt.list = true
+end, { desc = "Show witespaces" })
+keymap.set("n", "<leader><C-w>f", function()
+	vim.opt.list = false
+end, { desc = "Hide whitespaces" })
