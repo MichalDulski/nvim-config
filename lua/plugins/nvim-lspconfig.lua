@@ -84,7 +84,7 @@ return { -- LSP Configuration & Plugins
 			csharp_ls = {},
 			cssls = {},
 			svelte = {},
-			tsserver = {},
+			ts_ls = {},
 			yamlls = {},
 
 			lua_ls = {
