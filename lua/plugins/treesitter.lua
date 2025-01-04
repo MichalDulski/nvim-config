@@ -23,6 +23,7 @@ return {
 				"xml",
 				"svelte",
 			},
+			ignore_install = { "org" },
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {
